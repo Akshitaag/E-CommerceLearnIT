@@ -1,0 +1,44 @@
+#header {
+  background-color: rgb(21, 21, 63);
+  width: 100%;
+  height: 50px;
+}
+
+#logo {
+  height: 40px;
+}
+
+.filters {
+  border: 1px solid black;
+  background-color: rgb(236, 233, 233);
+  height: 600px;
+  margin: 0px;
+}
+.content {
+  border: 1px solid black;
+  background-color: white;
+  height: 1100px;
+  margin: 0px;
+  display: flex;
+}
+.container {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+.samplefilter {
+  border: 0.1px solid gray;
+  height: 200px;
+}
+/* .filtername {
+  margin: 10px;
+} */
+.card-img-top {
+  height: 300px;
+  overflow: hidden;
+}
