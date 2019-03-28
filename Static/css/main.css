@@ -281,3 +281,7 @@ input {
     padding-bottom: 45px;
   }
 }
+body{
+  background-image: url(../img/frontpage-bg.png);
+  background-size: 100%;
+}
