@@ -60,7 +60,7 @@ const Cart = db.define('cart',{
     quantity:{
         type: Sequelize.INTEGER
     },
-    amount : {
+    price : {
         type: Sequelize.INTEGER
     }
 })
