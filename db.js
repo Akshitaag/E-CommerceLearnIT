@@ -69,8 +69,8 @@ Cart.hasMany(Product);
 Product.belongsTo(Cart);
 Cart.hasMany(Vendor);
 Vendor.belongsTo(Cart);
-Vendor.hasMany(Product);
-Product.belongsTo(Vendor);
+// Vendor.hasMany(Product);
+// Product.belongsTo(Vendor);
 
 db.sync()
     .then(() => console.log("Database has been synced"))
