@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 
-const db = new Sequelize('shopdb', 'shopper', 'shoppass', {
+const db = new Sequelize('shopdb', 'shopper', 'shoppassword', {
     host: 'localhost',
     dialect: 'mysql',
     pool: {
@@ -9,7 +9,7 @@ const db = new Sequelize('shopdb', 'shopper', 'shoppass', {
     }
 })
 
-const User = db.define('users', {
+const Vendor = db.define('vendors', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -18,14 +18,6 @@ const User = db.define('users', {
     name: {
         type: Sequelize.STRING,
         allowNull: false,
-    },
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    password: {
-        type: Sequelize.STRING;
-        allowNull: false
     }
 })
 
@@ -39,37 +31,51 @@ const Product = db.define('products', {
         type: Sequelize.STRING,
         allowNull: false
     },
-    manufacturer: Sequelize.STRING,
+    vendor: Sequelize.STRING,
     price: {
         type: Sequelize.FLOAT,
         allowNull: false,
         defaultValue: 0.0
+    },
+    quantity:{
+        type: Sequelize.INTEGER,
+        allowNull: false
     }
 })
 
+
+
 const Cart = db.define('cart',{
-    user_id : {
+    vendor_id : {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
         primaryKey: true
     },
     product_id : {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
         primaryKey: true
     },
     description: {
         type: Sequelize.TEXT
+    },
+    quantity:{
+        type: Sequelize.INTEGER
     },
     amount : {
         type: Sequelize.INTEGER
     }
 })
 
+Cart.hasMany(Product);
+Product.belongsTo(Cart);
+Cart.hasMany(Vendor);
+Vendor.belongsTo(Cart);
+Vendor.hasMany(Product);
+Product.belongsTo(Vendor);
+
 db.sync()
     .then(() => console.log("Database has been synced"))
     .catch((err) => console.error("Error creating database"))
 
 exports = module.exports = {
-    User, Product, Cart
+    Vendor, Product, Cart
 }
