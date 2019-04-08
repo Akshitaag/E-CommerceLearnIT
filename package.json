@@ -1,0 +1,27 @@
+{
+  "name": "a",
+  "version": "1.0.0",
+  "description": "To create a functional e-commerce website in Node.js during the 12-week mentorship program of Learn IT Girl.\r ### Techstack used:\r Node.js, MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vermakhushboo/E-CommerceLearnIT-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vermakhushboo/E-CommerceLearnIT-1/issues"
+  },
+  "homepage": "https://github.com/vermakhushboo/E-CommerceLearnIT-1#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.5",
+    "path": "^0.12.7",
+    "sequelize": "^5.2.12",
+    "sqlite3": "^4.0.6"
+  }
+}
