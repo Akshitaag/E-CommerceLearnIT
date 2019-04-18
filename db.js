@@ -57,6 +57,9 @@ const Cart = db.define('cart',{
     description: {
         type: Sequelize.TEXT
     },
+    vendor:{
+        type: Sequelize.TEXT
+    },
     quantity:{
         type: Sequelize.INTEGER
     },
