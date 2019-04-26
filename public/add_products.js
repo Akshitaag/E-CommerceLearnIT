@@ -2,7 +2,7 @@ $(function() {
   let productName = $("#productName");
   let productVendor = $("#productVendor");
   let productPrice = $("#productPrice");
-  let productQuantity = $("productQuantity");
+  let productQuantity = $("#productQuantity");
 
   $("#btnProductAdd").click(function() {
     addProduct(

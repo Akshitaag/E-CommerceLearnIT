@@ -30,7 +30,7 @@ function createProductCard(product) {
                 <br>
                 <b>Quantity: ${product.quantity}</b>
             </div>
-            <button class="col btn btn-primary m-3">Buy</button> 
+            <button id="buynow" class="col btn btn-primary m-3">Buy</button> 
         </div>
     </div>`);
 }
